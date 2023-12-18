@@ -13,7 +13,7 @@ class CrossoveredBudgetLines(models.Model):
             if rec.planned_amount and rec.practical_amount:
                 rec.difference = rec.planned_amount - rec.practical_amount
                 #rec.difference_perc = float((rec.practical_amount / rec.planned_amount) * 100) / 100
-                rec.difference_perc = float(((rec.planned_amount - rec.practical_amount))/rec.practical_amount ) /100
+                rec.difference_perc = float((((rec.planned_amount - rec.practical_amount))/rec.practical_amount)*100 ) /100
 
             else:
                 rec.difference = False
